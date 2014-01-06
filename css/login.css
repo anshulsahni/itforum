@@ -1,0 +1,38 @@
+*{padding:0px; margin:0px; font-family: 'calibri';}
+#wrapper
+{
+	position: relative;
+	height: 100%;	width: 100%;
+}
+#container
+{
+	position: relative;
+	margin:0px auto; 
+	overflow-y:auto; 
+}
+#login_container
+{
+	position: relative;
+	margin:0px auto;
+	background-color: #dbdbdb;
+	width: 400px;	height: 250px;
+	padding-bottom: 20px;
+	border-radius:10px; border:1px solid #2c3747;
+}
+#sign_span{position: relative; font-size:25px; top:20px; margin-left: 50px; font-weight:900; color:#2c3747; }
+#form_container{position: relative; top:45px; margin:0px auto;}
+#form_container form{position: relative;}
+#form_container form table{position: relative; margin:0px auto;}
+#form_container form table tr td{padding: 15px 10px;}
+.input{text-align:center; border-radius:5px; border-style:none;}
+.input:focus{ border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset;}
+.login_inputs{height: 25px; width:300px; font-size:17px;}
+#access_a{position: relative; margin-left: 50px; top:10px;} 
+#access_a a{text-decoration:none; color:#506684;}
+#access_a a:link{text-decoration:none; color:#506684;}
+#access_a a:visited{text-decoration:none; color:#506684;}
+#access_a a:link{text-decoration:none; color:#506684;}
+#first_login_submit_wrapper{position: relative; display: table; margin-left: auto; margin-right:50px; top:42px;}
+.btn{border-style:0px; border-style:none;}
+.btn:focus{outline: none;}
+.login_submit{background-color:#506684; color:#fff; height: 25px;	width: 100px; border-radius:7px; font-size:18px; border:1px solid #2c3747;}
