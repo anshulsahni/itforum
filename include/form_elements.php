@@ -10,7 +10,7 @@
 		{echo "<input type='password' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength."/>";}
 
 
-		public function drawSubmit($name,$value,$id,$class,$onclick)
+		public function drawSubmit($name,$value=NULL,$id=NULL,$class=NULL,$onclick=NULL)
 		{echo "<input type='submit' name='".$name."' value='".$value."' id='".$id."' class='".$class."' onClick='".$onclick."'/>";}
 
 		public function drawDropDown($name,$id=NULL,$class=NULL,$options)

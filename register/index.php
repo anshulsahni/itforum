@@ -1,5 +1,5 @@
 <?php
-include('./form_elements.php');
+include('../include/form_elements.php');
 $it_register = new form_elements();		//object to build the elements for the form 
 //options set for the drop down of sections
 $section_op= Array 						
@@ -11,18 +11,27 @@ $section_op= Array
 	Array('D','D'),
 	Array('E','E')
 );
+$yr_op= Array
+(
+	Array('','Select Year...'),
+	Array('1','1st'),
+	Array('2','2nd'),
+	Array('3','3rd'),
+	Array('4','4th')
+);
 ?>
 <html>
 <head>
 	<title>IT Association Forum Registration</title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script type="text/javascript" src='../js/size.js'></script>
 </head>
 <body>
 	<div id='wrapper'>
 		<?php require_once('../include/header.inc'); ?>
 		<div id='container'>
 			<div id='register_form_holder'>
-				<form id='register_form' class='form' action='register_verify.php' name='register_form'>
+				<form id='register_form' class='form' action='register_verify.php' name='register_form' method='POST'>
 					<table border=0>
 						<tr>
 							<td><?php $it_register->drawTextBox('reg_no','reg_no_text','register_input textbox','Register Number',10);?></td>
@@ -38,6 +47,9 @@ $section_op= Array
 						</tr>
 						<tr>
 							<td><?php $it_register->drawTextBox('name','name_text','register_input textbox','Name',30);?></td>
+						</tr>
+						<tr>
+							<td><?php $it_register->drawDropDown('year','year_text','register_input drop_down',$yr_op);?></td>
 						</tr>
 						<tr>
 							<td><?php $it_register->drawDropDown('section','section_text','register_input drop_down',$section_op);?></td>
