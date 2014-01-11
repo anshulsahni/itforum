@@ -1,7 +1,7 @@
 <?php
-	if(!(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']=='../lgin_verify.php'))
-	{header('Location: ../error.php');}
-
+	session_start();
+	if(!(isset($_SESSION['key'])))
+	{header('Location: ../error.php');}	
 ?>
 
 
@@ -29,10 +29,10 @@
 				<div id='intro_content_container'>
 					<ul>
 						<li><div id='dp' class='img_container intro_element'><img src=""></div>		</li>
-						<li><div id='name' class='intro_element'>Anshul Sahni</div>					</li>
-						<li><div id='reg' class='intro_element'>1081210269</div>					</li>
-						<li><div id='yr' class='intro_element'>2<sup>nd</sup> Year</div>			</li>
-						<li><div id='section' class='introl_element'>In 'D' Section</div>			</li>
+						<li><div id='name' class='intro_element'><?php echo $_SESSION['sname']; ?>	</div>					</li>
+						<li><div id='reg' class='intro_element'><?php echo $_SESSION['reg_no']; ?></div>					</li>
+						<li><div id='yr' class='intro_element'><?php echo $_SESSION['syear'] ?><sup>nd</sup> Year</div>			</li>
+						<li><div id='section' class='introl_element'>In '<?php echo $_SESSION['ssection'];?>' Section</div>			</li>
 					</ul>
 				</div>
 			</div>

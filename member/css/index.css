@@ -19,8 +19,8 @@
 .intro_element{margin:0px auto;}
 .img_container{display: table;}
 #dp img{height: 130px;	width: 130px;}
-
 #forum_container{position:relative;margin:0px auto; height: 250px; height:100%; top:0px;}
+
 #forum_menu{width:400px; margin:0px auto; top:100px; position: relative;}
 #forum_menu>ul{ list-style-type: none;}
 #forum_menu>ul li{list-style-type: none; padding-bottom: 10px;} 
