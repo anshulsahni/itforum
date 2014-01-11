@@ -31,10 +31,13 @@
 			<div id='login_container'>
 				<span id='sign_span'>Sign In...</span>
 				<div id='form_container'>
-					<form id='first_login_form' class='form login_form' name='first_login_form' metod='POST' action='lgin_verify.php'>
+					<form id='first_login_form' class='form login_form' name='first_login_form' method='POST' action='lgin_verify.php'>
 						<table border=0>
 							<tr>
-								<td><?php $first_login->drawTextBox('register','register_text','input login_inputs','Enter Register Number','10');?></td>
+								<td>
+									<?php if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']=='http://localhost/it.in/new/forum/login.php'){echo "<span style='color:red; font-size:12px;'>Wrong Username or Password</span>";}?>
+									<?php $first_login->drawTextBox('register','register_text','input login_inputs','Enter Register Number','10');?>
+								</td>
 							</tr>
 							<tr>
 								<td><?php $first_login->drawPassword('user1','user1_text','input login_inputs password','Enter Password',15)?></td>

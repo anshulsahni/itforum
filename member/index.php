@@ -1,14 +1,23 @@
+<?php
+	if(!(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']=='../lgin_verify.php'))
+	{header('Location: ../error.php');}
+
+?>
+
+
 <html>
 <head>
 	<title>IT Association Forum</title>
 	<script type="text/javascript" src='../js/size.js'></script>
 	<script type="text/javascript" src='../js/jquery.js'></script>
+	<script type="text/javascript" src='./js/navigate_forum.js'></script>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#left_intro').css("left","0px");
 			$('#right_section').css("left",window.innerWidth-175+"px");
 			$('#forum_container').css("width",window.innerWidth-175-175+'px');
+			loadMenu();
 		});
 	</script>
 </head>
@@ -28,37 +37,7 @@
 				</div>
 			</div>
 			<div id='forum_container' class='member_element'>
-				<div id='forum_menu'>
-					<ul>
-						<li>
-							<div id='academic_menu' class='forum_menu_elements'>
-								<div class='img_container forum_menu_img_container'><img src="../imgs/member/academic.png"></div>
-								<div class='itm_desc'>
-									<h3>Academics..</h3>
-									has to be shared on every front inspite competition at every instance in your academics
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id='techn_menu' class='forum_menu_elements'>
-								<div class='img_container forum_menu_img_container'><img src="../imgs/member/tech.png"></div>
-								<div class='itm_desc'>
-									<h3>Technical...</h3>
-									be involved in and therefore we bring you platform for you wehere you can discuss wevery bit of kno
-								</div>
-							</div>
-						</li>
-						<li>
-							<div id='non_tech_menu' class='forum_menu_elements'>
-								<div class='img_container forum_menu_img_container'><img src="../imgs/member/non_tech.png"></div>
-								<div class='itm_desc'>
-									<h3>Non-Techical</h3>
-									academics and nothing else in our life it involves somehting else in us the X-factor that we shou
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 			<div id='right_section' class='right member_element'>
 				<div id='latest_entries' class='latest_member_elements'>

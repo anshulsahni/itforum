@@ -12,5 +12,4 @@
 <div id='header'>	
 		<div id='it_logo' class='logo header_elements'></div>
 		<div id='title_text' class='header_elements'></div>
-		<div id='forum_logo' class='header_elements logo'></div>
-</div>
+		<div id='forum_logo' class='header_elements logo'></div></div>
