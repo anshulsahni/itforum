@@ -3,6 +3,9 @@
 	if(!(isset($_SESSION['key'])))
 	{header('Location: ../error.php');}	
 ?>
+<?php
+	include_once('../include/form_elements.php');
+?>
 
 
 <html>
@@ -12,6 +15,14 @@
 	<script type="text/javascript" src='../js/jquery.js'></script>
 	<script type="text/javascript" src='./js/navigate_forum.js'></script>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<style type="text/css">
+		.user_operation_elements{font-family: 'ec'}
+		#make_entry:after{content:'\e011';}
+		#edit_entry:after{content:'\e006';}
+		#del_entry:after {content:'\e008';}
+		#view_entry:after{content:'\e010';}
+	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#left_intro').css("left","0px");
@@ -40,7 +51,7 @@
 				
 			</div>
 			<div id='right_section' class='right member_element'>
-				<div id='latest_entries' class='latest_member_elements'>
+				<div id='latest_entries' class='right_elements'>
 					<ul>
 						<li>Will show the recent entries by the members</li>
 						<li>Will show the recent entries by the members</li>
@@ -49,6 +60,14 @@
 						<li>Will show the recent entries by the members</li>
 					</ul>
 				</div>
+				<div id='user_operation' class='right_elements'>
+					<ul>
+						<li>	<span id='make_entry' class='user_operation_elements' onClick="menuClick('make_entry')">	</span>	</li>
+						<li>	<span id='edit_entry' class='user_operation_elements' onClick="menuClick('edit_entry')">	</span>	</li>
+						<li>	<span id='view_entry' class='user_operation_elements' onClick="menuClick('view_entry')">	</span>	</li>
+						<li>	<span id='del_entry' class='user_operation_elements'  onClick="menuClick('del_entry')">		</span>	</li>
+					</ul>
+				</div>					
 			</div>
 		</div>
 		<?php require_once('../include/footer.inc'); ?>

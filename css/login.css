@@ -24,9 +24,9 @@
 #form_container form{position: relative;}
 #form_container form table{position: relative; margin:0px auto;}
 #form_container form table tr td{padding: 15px 10px;}
-.input{text-align:center; border-radius:5px; border-style:none;}
+.input{border-radius:5px; border-style:none;}
 .input:focus{ border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset;}
-.login_inputs{height: 25px; width:300px; font-size:17px;}
+.login_inputs{height: 25px; width:300px; font-size:17px; text-align:center;}
 #access_a{position: relative; margin-left: 50px; top:10px;} 
 #access_a a{text-decoration:none; color:#506684;}
 #access_a a:link{text-decoration:none; color:#506684;}

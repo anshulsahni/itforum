@@ -26,15 +26,15 @@
 		{echo "<input type='radio' name='$name' value='$value',id='$id',class='$class' onClick='$onClick'".self::checkedOrNot($checked).">$text<br>";}
 
 		public function drawTextArea($name,$cols,$rows,$id=NULL,$class=NULL)
-		{echo "<textarea name='".$name."', cols='".$cols."',rows='".$rows."',id='".$id."',class='".$class."'/></textarea>";}
+		{echo "<textarea name='$name' cols=$cols rows=$rows id='$id' class='$class'></textarea>";}
 
 
 
 
 		private function checkedOrNot($val)
-		{if($val==1)	{return 'chedked';}	}
+		{if($val==1)	{return 'checked';}	}
 
 	}
 
 
-?>
+?> 

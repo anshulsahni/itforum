@@ -31,6 +31,13 @@
 .itm_desc>h3{color:#000;}
 
 #right_section{margin-left: auto;	margin-right:0px; background-color:#555; height: 100%; width:175px;top:0px;}
+.right_elements{color:#fff;}
 #latest_entries ul{list-style-type:none;}
-#latest_entries ul li{list-style-type:none; border-bottom:1px solid #fff; padding: 5px 0px;}
+#latest_entries ul li{list-style-type:none; border-bottom:1px solid #000; padding: 5px 0px;}
+
+#user_operation{position: relative; top:120px;} 
+#user_operation ul{list-style-type: none; display: inline-block;}
+#user_operation ul li{list-style-type: none; display: inline-block; padding:0px 5px;}
+.user_operation_elements{font-size:25px; cursor: pointer;}
+
 
