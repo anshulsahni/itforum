@@ -2,10 +2,6 @@
 	include_once('../include/form_elements.php');
 	$mk_en = new form_elements();
 ?>
-<?php
-
-
-?>
 
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/make_entry.css">
@@ -21,8 +17,7 @@
 ?>
 <div>
 	<div id='make_entry_container'>
-		<div id='make_entry_form_container'>
-			
+		<div id='make_entry_form_container'>			
 				<table>
 					<th>	<h3>Make Post</h3>	</th>
 					<tr>	<td><?php $mk_en->drawDropDown('category','category_text','make_entry_drop dropdown input',$cat_op);?></td>	</tr>

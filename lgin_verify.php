@@ -36,6 +36,7 @@
 
 			$session_insert_query='insert into sessions(session_key,session_time_start,user_id,session_date_start) values ("'.$key.'","'.$session_start_time.'","'.$_SESSION['user_id'].'","'.$session_start_date.'")';
 			mysql_query($session_insert_query);
+			
 			// setcookie('gdwgh',md5($_SERVER['key']));
 			// setcookie('gdwgh1',md5($_SERVER['user_id']));
 			database::disconnect();
