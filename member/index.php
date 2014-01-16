@@ -62,10 +62,10 @@
 				</div>
 				<div id='user_operation' class='right_elements'>
 					<ul>
-						<li>	<span id='make_entry' class='user_operation_elements' onClick="menuClick('make_entry')">	</span>	</li>
-						<li>	<span id='edit_entry' class='user_operation_elements' onClick="menuClick('edit_entry')">	</span>	</li>
-						<li>	<span id='view_entry' class='user_operation_elements' onClick="menuClick('view_entry')">	</span>	</li>
-						<li>	<span id='del_entry' class='user_operation_elements'  onClick="menuClick('del_entry')">		</span>	</li>
+						<li>	<span id='make_entry' class='user_operation_elements' onClick="menuClick('make_entry.php')">	</span>	</li>
+						<li>	<span id='edit_entry' class='user_operation_elements' onClick="menuClick('edit_entry.php')">	</span>	</li>
+						<li>	<span id='view_entry' class='user_operation_elements' onClick="menuClick('view_entry.php')">	</span>	</li>
+						<li>	<span id='del_entry' class='user_operation_elements'  onClick="menuClick('del_entry.php')">		</span>	</li>
 					</ul>
 				</div>					
 			</div>

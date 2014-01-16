@@ -10,11 +10,12 @@
 }
 
 #make_entry_form_container{margin-left: 10px;}
-#make_entry_container form table tr td{padding: 5px 0px;}
+#make_entry_form_container table tr td{padding: 5px 0px;}
 .dropdown{height: 25px; width:300px;}
 .input{border-radius:5px; border-style:none; font-size: 16px;}
 .input:focus{ border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset;}
 .make_entry_txt{height: 25px; width:300px;}
+textarea{resize:vertical;}
 #make_entry_submit_wrapper{position: relative; display: table; margin-left: auto; margin-right:50px; top:42px;}
 .btn{border-style:0px; border-style:none;}
 .btn:focus{outline: none;}

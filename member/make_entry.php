@@ -27,8 +27,7 @@
 							<label for='entry'>Enter Your Contents:</label>
 							<?php $mk_en->drawTextArea('entry',60,10,'entry_text','make_entry_entry input');?> 
 						</td>
-					</tr>
-					
+					</tr>					
 				</table>
 				<div id='make_entry_submit_wrapper' class='btn_wrapper'>
 					<?php $mk_en->drawButton('make_entry_submit','PUBLISH','make_entry_submit_id','btn','submit_post()'); ?>

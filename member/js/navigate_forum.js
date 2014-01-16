@@ -22,7 +22,7 @@ function loadMenu()
 function menuClick(menuop)
 {
 	var xml=createAjaxObj();
-	xml.open("GET","./"+menuop+".php",true);
+	xml.open("GET","./"+menuop,true);
 	xml.send();
 	xml.onreadystatechange=function()
 	{
@@ -46,11 +46,46 @@ function submit_post()
 		{alert("Please fill in the contents for the post");  }
 	else
 		{	
-			var xml=new createAjaxObj();
+			var xml=createAjaxObj();
 			xml.open("GET",'submit_post.php?cat='+cat+'&title='+title+'&content='+content,true);
 			xml.send();
 			document.getElementById('make_entry_container').innerHTML="<span id='make_entry_response'>Your Post Has Been Submitted</span>";
 		}
+}
+
+
+function showPost(class1)
+{
+	var xml=createAjaxObj();
+	xml.open("GET",'./showPost.php?class='+class1,true);
+	xml.send();
+	xml.onreadystatechange=function()
+	{
+		if(xml.readyState==4 && xml.status==200)
+			{document.getElementById('forum_wrapper').innerHTML=xml.responseText;}
+	}
+}
+
+function submit_comment()
+{
+	var comment=document.getElementById('write_comment_text').value;
+	if(comment.length>0)
+	{
+		var xml=createAjaxObj();
+		comment=encodeURIComponent(comment);
+		var post=encodeURIComponent(document.getElementById('post').value);
+		var c_data='comment='+comment+'&post='+post;
+		xml.open("POST",'./submit_comment.php',false);
+		xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xml.send(c_data);
+		showPost(document.getElementById('post').value)
+		// xml.onreadystatechange=function()
+		// {
+		// if(xml.readyState==4 && xml.status==200)
+		// 	{document.getElementById('forum_wrapper').innerHTML=xml.responseText;}
+		// }		
+
+	}
 }
 
 

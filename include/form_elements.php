@@ -29,9 +29,7 @@
 		{echo "<textarea name='$name' cols=$cols rows=$rows id='$id' class='$class'></textarea>";}
 
 
-
-
-		private function checkedOrNot($val)
+		private function checkedOrNot($val)		//function to check whether the value entered is for true or false
 		{if($val==1)	{return 'checked';}	}
 
 	}

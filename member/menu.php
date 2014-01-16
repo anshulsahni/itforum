@@ -14,7 +14,7 @@
 <div id='forum_menu'>
 	<ul>
 		<li>
-			<div id='academic_menu' class='forum_menu_elements' onClick="menuClick('acdmc')">
+			<div id='academic_menu' class='forum_menu_elements' onClick="menuClick('forum.php?cat=acd')">
 				<div class='img_container forum_menu_img_container'><img src="../imgs/member/academic.png"></div>
 				<div class='itm_desc'>
 					<h3>Academics..</h3>
@@ -23,7 +23,7 @@
 			</div>
 		</li>
 		<li>
-			<div id='techn_menu' class='forum_menu_elements' onClick="menuClick('tch')">
+			<div id='techn_menu' class='forum_menu_elements' onClick="menuClick('forum.php?cat=tch')">
 				<div class='img_container forum_menu_img_container'><img src="../imgs/member/tech.png"></div>
 				<div class='itm_desc'>
 					<h3>Technical...</h3>
@@ -32,7 +32,7 @@
 			</div>
 		</li>
 		<li>
-			<div id='non_tech_menu' class='forum_menu_elements' onClick="menuClick('ntch')">
+			<div id='non_tech_menu' class='forum_menu_elements' onClick="menuClick('forum.php?cat=ntc')">
 				<div class='img_container forum_menu_img_container'><img src="../imgs/member/non_tech.png"></div>
 				<div class='itm_desc'>
 					<h3>Non-Techical</h3>
