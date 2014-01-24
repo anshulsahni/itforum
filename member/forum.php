@@ -9,7 +9,7 @@
 	{
 		$cat=$_GET['cat'];
 		database::connect();
-		$post_query_result=mysql_query("select * from post where category='$cat' limit 0,6");
+		$post_query_result=mysql_query("select * from post where category='$cat' order by post_date DESC limit 0,6");
 		database::disconnect();
 	}
 

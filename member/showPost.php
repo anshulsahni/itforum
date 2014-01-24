@@ -26,7 +26,6 @@
 			$temp_array['content']=$row['comment_content'];
 			array_push($comment,$temp_array);
 		}
-		// print_r($comment);
 		database::disconnect();
 		echo"<div class='show_wrapper'><div class='show_title show_members'><h3>".$post_result['title']."</h3></div>";
 		echo"<div class='credentials show_members'><span>Posted By: </span><span class='show_writer'>".$user_result['sname']."</span></div>";

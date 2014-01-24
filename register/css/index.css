@@ -1,1 +1,35 @@
-*{padding:0px; margin:0px; font-family: 'calibri';}
+*:not(.pad){padding:0px; margin:0px; font-family: 'calibri';}
+#wrapper
+{
+	position: relative;
+	height: 100%;	min-width: 1300px;
+}
+#container
+{
+	position: relative;
+	margin: 0px auto;
+	width:620px; height: auto;
+}
+#register_form_holder
+{
+	position: relative;
+	margin:0px auto;	top:75px;
+	width:630px; height: auto;
+	background-color: #dbdbdb;
+	border-radius: 10px; border:1px solid #2c3747;
+	padding:15px 0px;
+}
+#fill_error{height: 22px; color:#f00; font-size:13px; margin-left:80px;}
+#register_form_holder form table{position: relative; margin-left:65px;}
+#register_form_holder form table tr td{padding:7px 0px;}
+.textbox{border-radius:5px; border-style:none;} 
+.textbox:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
+.drop_down{border-radius:5px; border-style:none;}
+.drop_down:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
+.register_input{height: 27px; width:275px; font-size: 16px;}
+.req_symbol{color:#f00;}
+.tooltip{font-size:11px; color:#2c3474; margin-left: 8px; display: none;}
+.btn_wrapper{position: relative; display: table; margin-left: auto; margin-right:40px; top:25px;}
+.btn{border-style:0px; border-style:none;}
+.btn:focus{outline: none;}
+.submit_btn{background-color: #506684; border-radius: 5px; height: 25px; width:100px; color:#fff; border:1px solid #2c3747; font-size: 18px;}

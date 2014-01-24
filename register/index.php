@@ -25,40 +25,45 @@ $yr_op= Array
 	<title>IT Association Forum Registration</title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<script type="text/javascript" src='../js/size.js'></script>
+	<script type="text/javascript" src='../js/register.js'></script>
+	<script type="text/javascript" src='../js/jquery.js'></script>
+	<style type="text/css">
+	</style>
 </head>
 <body>
 	<div id='wrapper'>
 		<?php require_once('../include/header.inc'); ?>
 		<div id='container'>
 			<div id='register_form_holder'>
-				<form id='register_form' class='form' action='register_verify.php' name='register_form' method='POST'>
+				<div id='fill_error'></div>
+				<form id='register_form' class='form' action='./register_verify.php' name='register_form' method='POST'>
 					<table border=0>
 						<tr>
-							<td><?php $it_register->drawTextBox('reg_no','reg_no_text','register_input textbox','Register Number',10);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawTextBox('reg_no','reg_no_text','register_input textbox','Register Number',10);?><span class='tooltip'>Enter your college register no.</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawPassword('user1','user1_text','register_input textbox password','Password',15);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawPassword('user1','user1_text','register_input textbox password','Password',15);?><span class='tooltip'>Password should be between 6 and 15 characters</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawPassword('user2','user2_text','register_input textbox password','Enter Password Again',15);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawPassword('user2','user2_text','register_input textbox password','Enter Password Again',15);?><span class='tooltip'>Enter your password again</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawTextBox('email','email_text','register_input textbox','E Mail',50);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawTextBox('email','email_text','register_input textbox','E Mail',50);?><span class='tooltip'>Your account will be verified through this email</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawTextBox('name','name_text','register_input textbox','Name',30);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawTextBox('name','name_text','register_input textbox','Name',30);?><span class='tooltip'>Enter your name in not more than 30 characters</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawDropDown('year','year_text','register_input drop_down',$yr_op);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawDropDown('year','year_text','register_input drop_down',$yr_op);?></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawDropDown('section','section_text','register_input drop_down',$section_op);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawDropDown('section','section_text','register_input drop_down',$section_op);?></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawTextBox('hometown','hometown_text','register_input textbox','Home Town',30);?></td>
+							<td>&nbsp;&nbsp;&nbsp;<?php $it_register->drawTextBox('hometown','hometown_text','register_input textbox','Home Town',30);?><span class='tooltip'>Enter only if you want to share</span></td>
 						</tr>
 						<tr>
-							<td><?php $it_register->drawTextBox('number','number_text','register_input textbox','Mobile Number',10);?></td>
+							<td><span class='req_symbol'>*</span>&nbsp;<?php $it_register->drawTextBox('number','number_text','register_input textbox','Mobile Number',10);?><span class='tooltip'>It won't be disclosed anywhere</span></td>
 						</tr>
 					</table>
 					<div id='submit_wrapper' class='btn_wrapper'>
@@ -70,4 +75,12 @@ $yr_op= Array
 		<?php require_once('../include/footer.inc'); ?>
 	</div>
 </body>
+<script type="text/javascript">
+	$(".register_input").focus(function(){
+		$(this).siblings('.tooltip').fadeIn(500);
+	});
+	$(".register_input").blur(function(){
+		$(this).siblings('.tooltip').fadeOut(500);
+	});
+</script>
 </html>

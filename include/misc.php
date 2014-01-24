@@ -20,6 +20,5 @@
 		public static function setZone($timeZone='Asia/Calcutta')		//static function to set the time zone of website
 		{date_default_timezone_set($timeZone);}
 	}
-	
 
 ?>

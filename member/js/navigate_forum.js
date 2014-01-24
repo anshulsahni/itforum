@@ -6,7 +6,6 @@ function createAjaxObj()
 		return new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-
 function loadMenu()
 {
 	var xml=createAjaxObj();
@@ -31,7 +30,6 @@ function menuClick(menuop)
 	}
 }
 
-
 function submit_post()
 {
 	var cat=document.getElementById('category_text').value;
@@ -52,7 +50,6 @@ function submit_post()
 			document.getElementById('make_entry_container').innerHTML="<span id='make_entry_response'>Your Post Has Been Submitted</span>";
 		}
 }
-
 
 function showPost(class1)
 {
@@ -79,12 +76,6 @@ function submit_comment()
 		xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xml.send(c_data);
 		showPost(document.getElementById('post').value)
-		// xml.onreadystatechange=function()
-		// {
-		// if(xml.readyState==4 && xml.status==200)
-		// 	{document.getElementById('forum_wrapper').innerHTML=xml.responseText;}
-		// }		
-
 	}
 }
 

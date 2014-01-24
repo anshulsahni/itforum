@@ -4,21 +4,21 @@
 
 		
 		public function drawTextBox($name,$id=NULL,$class=NULL,$placeholder=NULL,$maxlength=NULL)
-		{echo "<input type='text' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength."/>";}
+		{echo "<input type='text' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength.">";}
 
 		public function drawPassword($name,$id=NULL,$class=NULL,$placeholder=NULL,$maxlength=NULL)
-		{echo "<input type='password' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength."/>";}
+		{echo "<input type='password' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength.">";}
 
 		public function drawButton($name,$value=NULL,$id=NULL,$class=NULL,$onclick=NULL)
-		{echo "<input type='button' name='".$name."' value='".$value."' id='".$id."' class='".$class."' onClick='".$onclick."'/>";}
+		{echo "<input type='button' name='".$name."' value='".$value."' id='".$id."' class='".$class."' onClick='".$onclick."'>";}
 
 
 		public function drawSubmit($name,$value=NULL,$id=NULL,$class=NULL,$onclick=NULL)
-		{echo "<input type='submit' name='".$name."' value='".$value."' id='".$id."' class='".$class."' onClick='".$onclick."'/>";}
+		{echo "<input type='submit' name='".$name."' value='".$value."' id='".$id."' class='".$class."' onClick='".$onclick."'>";}
 
 		public function drawDropDown($name,$id=NULL,$class=NULL,$options)
 		{
-			echo "<select name='$name' id='$id' class='$class'/>";
+			echo "<select name='$name' id='$id' class='$class'>";
 			foreach ($options as $op)
 			{echo "<option value='$op[0]'>$op[1]</option>";}
 		}
@@ -28,11 +28,16 @@
 		public function drawTextArea($name,$cols,$rows,$id=NULL,$class=NULL)
 		{echo "<textarea name='$name' cols=$cols rows=$rows id='$id' class='$class'></textarea>";}
 
+		public function drawUpload($name,$accept,$id=NULL,$class=NULL)
+		{echo "<input type='file' name='$name' id='$id' class='$class' accept='$accept'>";}
+
+		public function drawHidden($name,$value)
+		{echo "<input type='hidden' name='$name' value='$value'>";}
+
 
 		private function checkedOrNot($val)		//function to check whether the value entered is for true or false
 		{if($val==1)	{return 'checked';}	}
 
 	}
-
 
 ?> 
