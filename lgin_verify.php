@@ -30,6 +30,7 @@
 			$_SESSION['sname']=$login_query_result['sname'];
 			$_SESSION['ssection']=$login_query_result['ssection'];
 			$_SESSION['syear']=$login_query_result['syear'];
+			$_SESSION['dp']=$login_query_result['dp_img'];
 
 			$session_start_time=date('h:i:s');
 			$session_start_date=date('Y/m/d');

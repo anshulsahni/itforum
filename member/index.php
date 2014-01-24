@@ -6,8 +6,6 @@
 <?php
 	include_once('../include/form_elements.php'); 
 ?>
-
-
 <html>
 <head>
 	<title>IT Association Forum</title>
@@ -39,7 +37,7 @@
 			<div id='left_intro' class='left member_element'>
 				<div id='intro_content_container'>
 					<ul>
-						<li><div id='dp' class='img_container intro_element'><img src=""></div>		</li>
+						<li><div id='dp' class='img_container intro_element'><img src="<?php echo $_SESSION['dp']; ?>"></div>		</li>
 						<li><div id='name' class='intro_element'><?php echo $_SESSION['sname']; ?>	</div>					</li>
 						<li><div id='reg' class='intro_element'><?php echo $_SESSION['reg_no']; ?></div>					</li>
 						<li><div id='yr' class='intro_element'><?php echo $_SESSION['syear'] ?><sup>nd</sup> Year</div>			</li>
