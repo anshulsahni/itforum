@@ -1,0 +1,27 @@
+/* css file for styling the index file for profile_settings directory */
+
+*{padding:0px; margin:0px;}
+#wrapper
+{
+	position: relative;
+	height: 100%;	width:1005;
+}
+#container
+{
+	position: relative;
+	margin:0px auto;
+	overflow-y:auto;
+}
+#heading{position: relative; display: table; margin:100px auto;}
+#heading h2{color:#2c3747;}
+#edit_form_container{position: relative; display: table; background-color: #dbdbdb; border:1px solid #2c3747; margin:100px auto; padding:20px; border-radius:10px;}
+#edit_form_container form table tr td{padding:0px 10px;}
+
+.textbox{border-radius:5px; border-style:none;}
+.textbox:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
+.edit_input{height: 25px; width:250px;}
+.drop_down{border-radius:5px; border-style:none;}
+.drop_down:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
+.btn{border-style:0px; border-style:none;}
+.btn:focus{outline: none;}
+.change_btn{background-color:#2c3747; box-shadow: 3px 3px 5px #000; color:#fff; border-radius:5px; height:25px; width:100px;}
