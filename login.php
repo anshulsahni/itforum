@@ -43,7 +43,7 @@
 								<td><?php $first_login->drawPassword('user1','user1_text','input login_inputs password','Enter Password',15)?></td>
 							</tr>
 						</table>
-						<span id='access_a'><a href='./cantaccess.php'>Can't access your Account</a></span>
+						<span id='access_a'><a href='./register'>Register to become a member</a></span>
 						<div id='first_login_submit_wrapper' class='btn_wrapper'>
 							<?php $first_login->drawSubmit('first_login_submit','Log In','first_login_submit_text','login_submit btn');?>
 						</div>
