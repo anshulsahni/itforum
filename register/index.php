@@ -27,14 +27,23 @@ $yr_op= Array
 	<script type="text/javascript" src='../js/size.js'></script>
 	<script type="text/javascript" src='../js/register.js'></script>
 	<script type="text/javascript" src='../js/jquery.js'></script>
-	<style type="text/css">
-	</style>
+
+	<!-- code for applying the custome scrollers -->
+	<link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css">
+	<script type="text/javascript" src="../js/jquery.jscrollpane.js"></script>
+	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$(".scroll-pane").delay(1000).jScrollPane();
+			})		
+	</script>
 </head>
 <body>
 	<div id='wrapper'>
 		<?php require_once('../include/header.inc'); ?>
 		<div id='container'>
-			<div id='register_form_holder'>
+			<div id='container_holder' class='scroll-pane'>
+			 <div id='register_form_holder'>
 				<div id='fill_error'></div>
 				<form id='register_form' class='form' action='./register_verify.php' name='register_form' method='POST'>
 					<table border=0>
@@ -70,6 +79,7 @@ $yr_op= Array
 						<?php $it_register->drawSubmit('register_submit','SUBMIT','register_submit_btn','btn submit_btn','return detVerify()');?>
 					</div>
 				</form>
+			</div>
 			</div>
 		</div>
 		<?php require_once('../include/footer.inc'); ?>

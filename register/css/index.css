@@ -8,13 +8,15 @@
 {
 	position: relative;
 	margin: 0px auto;
-	width:620px; height: auto;
+	width:100%;
+	overflow: hidden;
 }
+#container_holder{padding-bottom: 220px; height: 100%; width: 100%;}
 #register_form_holder
 {
 	position: relative;
 	margin:0px auto;	top:75px;
-	width:630px; height: auto;
+	width:630px;
 	background-color: #dbdbdb;
 	border-radius: 10px; border:1px solid #2c3747;
 	padding:15px 0px;
@@ -22,7 +24,7 @@
 #fill_error{height: 22px; color:#f00; font-size:13px; margin-left:80px;}
 #register_form_holder form table{position: relative; margin-left:65px;}
 #register_form_holder form table tr td{padding:7px 0px;}
-.textbox{border-radius:5px; border-style:none;} 
+.textbox{border-radius:5px; border-style:none;}
 .textbox:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
 .drop_down{border-radius:5px; border-style:none;}
 .drop_down:focus{border: 1px solid #2c3747; outline-style: none; box-shadow: 0px 0px 2px #000 inset; padding-left: 3px;}
