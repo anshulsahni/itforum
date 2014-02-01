@@ -69,7 +69,7 @@
 				</div>					
 			</div>
 		</div>
-		<?php require_once('../include/footer_member.inc'); ?>
+		<?php require_once('../include/footer.inc'); ?>
 	</div>
 </body>
 </html>

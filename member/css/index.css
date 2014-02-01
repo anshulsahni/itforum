@@ -8,8 +8,9 @@
 {
 	position: relative;
 	margin:0px auto; 
-	overflow-y:auto; 
+	overflow-y:hidden; 
 }
+#container_holder{padding-bottom: 220px; height: 100%; width: 100%;}
 .member_element{position: absolute;}
 #left_intro{margin-right: auto; margin-left: 0px; height: 100%;	width: 175px;	background-color:#555; text-align:center; top:0px;}
 #intro_content_container{position:relative;margin: 0px auto; top:25px;}
@@ -19,7 +20,11 @@
 .intro_element{margin:0px auto;}
 .img_container{display: table;}
 #dp img{height: 130px;	width: 130px;}
-#forum_container{position:relative;margin:0px auto; height: 250px; height:100%; top:0px;}
+
+#logout{position: relative; text-align: center; color: #fff; margin:170px auto; height: 25px; width:150px; cursor: default;} 
+#logout:hover{background-color: #444;}
+
+#forum_container{position:relative;margin:0px auto; top:0px;}
 
 #forum_menu{width:400px; margin:0px auto; top:100px; position: relative;}
 #forum_menu>ul{ list-style-type: none;}

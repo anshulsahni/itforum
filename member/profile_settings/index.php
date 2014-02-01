@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="../../js/jquery.js"></script>
 	<script type="text/javascript" src="../../js/size.js"></script>
 	<script type="text/javascript" src="../../js/settings.js"></script>
+
 </head>
 <body>
 	<?php include("../../include/header.inc");?>
@@ -36,6 +37,10 @@
 	</div>
 	<?php include("../../include/footer.inc"); ?>
 </body>
+<!-- needed constatns -->
+<script type="text/javascript">
+	var unwanted_server_string="unwanted_server_string","<!-- www.1freehosting.com Analytics Code --><noscript><a title=\"Free hosting\" href=\"http://www.1freehosting.com\" rel=\"nofollow\">Free hosting</a><a title=\"Web host free\" href=\"http://www.1freehosting.com\" rel=\"nofollow\">Web host free</a><a title=\"Free websites hosting\" href=\"http://www.1freehosting.com/free-website-and-hosting.html\" rel=\"nofollow\">Free websites hosting</a><a title=\"Pagerank SEO analytic\" href=\"http://www.1pagerank.com\">Pagerank SEO analytic</a></noscript><script type=\"text/javascript\">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-21588661-2']);  _gaq.push(['_setDomainName', window.location.host]);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);    var fga = document.createElement('script'); fga.type = 'text/javascript'; fga.async = true;    fga.src = ('https:' == document.location.protocol ? 'https://www' : 'http://www') + '.1freehosting.com/cdn/ga.js';    var fs = document.getElementsByTagName('script')[0]; fs.parentNode.insertBefore(fga, fs);  })();</script><!-- End Of Analytics Code -->";
+</script>
 <script type="text/javascript">
 	$("#field_text").change(function(){
 	var fld=document.forms['edit_form'].elements['field'].value;
@@ -48,7 +53,8 @@
 		{
 			if(xml.readyState==4 && xml.status==200)
 				{
-					document.getElementById('value_text').value=xml.responseText;
+					var got_val=xml.responseText.replace(unwanted_server_string,"")
+					document.getElementById('value_text').value=got_val;
 					setMaxLength(fld);
 				}
 		}
@@ -73,8 +79,6 @@
 	// 		{
 	// 			alert("Wrong value entered only valid sections in capital letters allowed");
 	// 			$("#value_text").val(" ");
-	// 		}
-
-	});		
+	// 		}	
 </script>
 </html>

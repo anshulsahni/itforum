@@ -40,8 +40,8 @@
 		mysql_query("insert into non_verified_member values ('','$reg_no','$email','$ver_code','$date','$time')") or die(mysql_error());
 		database::disconnect();
 
-		$mail_content="This is an auto generated mail from the IT Association Forum,SRM University,Chennai<br>Please click the following link to confirm your registration at IT Association Forum, SRM University <br>";
-		$mail_content.="<a href='connecting.hostingsiteforfree.com/itforum/register/email_verify.php?em_code=$ver_code'>connecting.hostingsiteforfree.com/itforum/register/email_verify.php?em_code=$ver_code</a><br><br>";
+		$mail_content="This is an auto generated mail from the IT Association Forum,SRM University,Chennai Please click the following link to confirm your registration at IT Association Forum, SRM University";
+		$mail_content.="connecting.hostingsiteforfree.com/itforum/register/email_verify.php?em_code=$ver_code";
 		$mail_content.="If you have not registered on IT Association Forum then kindly please ignore this email<br><br><br>Regards Team IT Association";
 		$headers="From: support@itassociation.in";
 		mail($email,"Registration Verification",$mail_content,$headers);

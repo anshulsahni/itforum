@@ -29,5 +29,4 @@
 		body{padding:0px; margin:0px;}
 		.msg{display: table; margin: 20px auto; color:#2c3747; font-size: 25px;}
 	</style>
-
 </head>

@@ -16,12 +16,13 @@
 		//code to generate the random key for sessions
 		else 			
 		{
-			generate_key:							
-			$key=rand(); 
-			$session_query_result=mysql_query("select * from sessions where session_key=$key");
-			$session_query_result=mysql_fetch_assoc($session_query_result);
-			if($session_query_result)
-			{goto generate_key;}				
+			generate_session_key:	
+			$key1=rand(10000,99999);
+			$key2=rand(10000,99999);
+			$key=$key1.$key2;
+			$result=mysql_query("select * from session where session_key='$key'");
+			if(mysql_num_rows($result)>0)
+			goto generate_session_key;				
 
 			session_start();
 			$_SESSION['key']=$key;

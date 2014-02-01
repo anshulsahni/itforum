@@ -1,7 +1,6 @@
 /*this is the styling file for complaint page*/
 
-
-*{padding:0px; margin:0px;}
+*{padding:0px; margin:0px; font-family: "calibri";}
 #wrapper
 {
 	position: relative;
