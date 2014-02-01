@@ -79,6 +79,9 @@ function submit_comment()
 	}
 }
 
+function logout()
+{	window.location="./logout.php";	}
+
 
 
 

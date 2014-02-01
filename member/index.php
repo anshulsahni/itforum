@@ -44,6 +44,7 @@
 						<li><div id='section' class='introl_element'>In '<?php echo $_SESSION['ssection'];?>' Section</div>			</li>
 					</ul>
 				</div>
+				<div id='logout' onclick='logout()'>LOGOUT</div>
 			</div>
 			<div id='forum_container' class='member_element'>
 				
@@ -68,7 +69,7 @@
 				</div>					
 			</div>
 		</div>
-		<?php require_once('../include/footer.inc'); ?>
+		<?php require_once('../include/footer_member.inc'); ?>
 	</div>
 </body>
 </html>
