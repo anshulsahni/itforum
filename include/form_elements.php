@@ -3,8 +3,8 @@
 	{
 
 		
-		public function drawTextBox($name,$id=NULL,$class=NULL,$placeholder=NULL,$maxlength=NULL)
-		{echo "<input type='text' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength.">";}
+		public function drawTextBox($name,$id=NULL,$class=NULL,$placeholder=NULL,$maxlength=NULL,$value=null)
+		{echo "<input type='text' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength." value='$value'>";}
 
 		public function drawPassword($name,$id=NULL,$class=NULL,$placeholder=NULL,$maxlength=NULL)
 		{echo "<input type='password' name='".$name."' id='".$id."' class='".$class."' placeholder='".$placeholder."' maxlength=".$maxlength.">";}
@@ -25,8 +25,8 @@
 		public function drawOption($name,$value,$text,$checked=0,$id=NULL,$class=NULL,$onClick=NULL)
 		{echo "<input type='radio' name='$name' value='$value',id='$id',class='$class' onClick='$onClick'".self::checkedOrNot($checked).">$text<br>";}
 
-		public function drawTextArea($name,$cols,$rows,$id=NULL,$class=NULL)
-		{echo "<textarea name='$name' cols=$cols rows=$rows id='$id' class='$class'></textarea>";}
+		public function drawTextArea($name,$cols,$rows,$id=NULL,$class=NULL,$value=null)
+		{echo "<textarea name='$name' cols=$cols rows=$rows id='$id' class='$class'>$value</textarea>";}
 
 		public function drawUpload($name,$accept,$id=NULL,$class=NULL)
 		{echo "<input type='file' name='$name' id='$id' class='$class' accept='$accept'>";}
